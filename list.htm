@@ -1,0 +1,132 @@
+<!-- <!doctype html>
+
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>BookID</td>
+
+            <td>Bookname</td>
+
+            <td>BookDate</td>
+
+            <td>BookCategory</td>
+
+            <td>BookWriter</td>
+
+         </thead>
+
+         {% for row in rows %}
+            <tr>
+               <td>{{row["BookID"]}}</td>
+
+               <td>{{row["BookName"]}}</td>
+
+               <td>{{row["BookDate"]}}</td>
+
+               <td>{{row["BookCategory"]}}</td>
+
+               <td>{{row["BookWriter"]}}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+
+     <a href = "/">Go back to home page</a>
+
+  </body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Book Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0077c2;
+      color: white;
+      padding: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    a {
+      display: inline-block;
+      background-color: #0077c2;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      background-color: #005580;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>List Book Orders</h1>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Book Order ID</th>
+        <th>Book ID</th>
+        <th>Book Name</th>
+        <th>Book Date</th>
+        <th>Book Category</th>
+        <th>Book Writer</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/">Go back to home page</a>
+</body>
+
+</html>
